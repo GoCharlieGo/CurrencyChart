@@ -56,11 +56,9 @@ namespace CurrencyChart.Migrations
             };
             foreach (var t in transactions)
             {
-                var transactionDb = context.Transactions.Where(
-                    c =>
-                         c.Currency.Id == t.CurrencyId &&
-                         c.Member.Id == t.BuyerId &&
-                         c.Member.Id == t.SallerId).SingleOrDefault();
+                var transactionDb = context.Transactions.SingleOrDefault(c => c.Currency.Id == t.CurrencyId &&
+                         c.Buyer.Id == t.BuyerId &&
+                         c.Saller.Id == t.SallerId);
                 if (transactionDb == null)
                 {
                     context.Transactions.Add(t);

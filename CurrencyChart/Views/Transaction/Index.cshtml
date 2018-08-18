@@ -12,22 +12,22 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Currency.Name)
+            Валюта
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SallerId)
+            Продавец
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BuyerId)
+            Покупатель
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            Цена
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Count)
+            Объём
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Date)
+            Дата
         </th>
         <th></th>
     </tr>
@@ -38,10 +38,10 @@
             @Html.DisplayFor(modelItem => item.Currency.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SallerId)
+            @Html.DisplayFor(modelItem => item.Saller.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BuyerId)
+            @Html.DisplayFor(modelItem => item.Buyer.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)

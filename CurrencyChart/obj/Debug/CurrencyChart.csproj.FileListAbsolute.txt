@@ -200,9 +200,10 @@ C:\Rep\githubRepository\CurrencyChart\bin\ru\System.Web.WebPages.resources.dll
 C:\Rep\githubRepository\CurrencyChart\bin\ru\System.Web.WebPages.Deployment.resources.dll
 C:\Rep\githubRepository\CurrencyChart\bin\ru\System.Web.WebPages.Razor.resources.dll
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csprojAssemblyReference.cache
-C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.Migrations.InitialCreate.resources
-C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csproj.GenerateResource.cache
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csproj.CoreCompileInputs.cache
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csproj.CopyComplete
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.dll
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.pdb
+C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.Migrations.New.resources
+C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csproj.GenerateResource.cache
+C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.Migrations.New2.resources

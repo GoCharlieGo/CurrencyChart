@@ -161,9 +161,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808181222421_InitialCreate.cs" />
-    <Compile Include="Migrations\201808181222421_InitialCreate.Designer.cs">
-      <DependentUpon>201808181222421_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201808181656285_New.cs" />
+    <Compile Include="Migrations\201808181656285_New.Designer.cs">
+      <DependentUpon>201808181656285_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808181702243_New2.cs" />
+    <Compile Include="Migrations\201808181702243_New2.Designer.cs">
+      <DependentUpon>201808181702243_New2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -246,8 +250,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808181222421_InitialCreate.resx">
-      <DependentUpon>201808181222421_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808181656285_New.resx">
+      <DependentUpon>201808181656285_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808181702243_New2.resx">
+      <DependentUpon>201808181702243_New2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,7 +7,7 @@ namespace CurrencyChart.DAL
     public class CurrencyChartContext : DbContext
     {
 
-        public CurrencyChartContext() : base("CurrencyChartContext")
+        public CurrencyChartContext() : base("CurrencyChart2Context")
         {
         }
 

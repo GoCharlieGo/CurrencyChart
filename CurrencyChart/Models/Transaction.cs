@@ -13,6 +13,7 @@ namespace CurrencyChart.Models
         public DateTime Date { get; set; }
 
         public virtual Currency Currency { get; set; }
-        public virtual Member Member { get; set; }
+        public virtual Member Saller { get; set; }
+        public virtual Member Buyer { get; set; }
     }
 }
