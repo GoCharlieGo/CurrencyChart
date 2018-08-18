@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CurrencyChart.Models.Transaction>
+@{
+    Layout = null;
+}
+<table class="table">
+    <tr>
+        <th>
+            Валюта
+        </th>
+        <th>
+            Продавец
+        </th>
+        <th>
+            Покупатель
+        </th>
+        <th>
+            Цена
+        </th>
+        <th>
+            Объём
+        </th>
+        <th>
+            Дата
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Currency.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saller.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buyer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+        </tr>
+    }
+</table>

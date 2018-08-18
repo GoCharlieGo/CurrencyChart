@@ -207,3 +207,4 @@ C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.pdb
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.Migrations.New.resources
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.csproj.GenerateResource.cache
 C:\Rep\githubRepository\CurrencyChart\obj\Debug\CurrencyChart.Migrations.New2.resources
+C:\Rep\githubRepository\CurrencyChart\bin\DotNet.Highcharts.dll

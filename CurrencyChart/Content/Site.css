@@ -52,3 +52,10 @@ textarea {
     top: 1px;
     text-decoration: none;
 }
+.table {
+    margin: auto;
+    text-align: center;
+}
+.table th {
+    text-align: center;
+}
