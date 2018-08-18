@@ -1,0 +1,54 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.button-row {
+    margin-top: 20px;
+    text-align: center;
+}
+.razor-button, .ajax-button {
+    width: 15%;
+    display: inline-block;
+    box-shadow: inset 0px -3px 7px 0px #29bbff;
+    background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 9px 23px;
+    text-decoration: none;
+    margin: 10px;
+}
+.razor-button:hover,focus, .ajax-button:hover,focus {
+    background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    text-decoration: none;
+    color: #ffffff;
+}
+.razor-button:active, .ajax-button:active {
+    color: #ffffff;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+}
