@@ -41,6 +41,10 @@ textarea {
     margin: 10px;
     text-decoration: none;
 }
+.razor-button a {
+    color: #ffffff;
+    text-decoration: none;
+}
 .razor-button:hover,focus, .ajax-button:hover,focus {
     background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
     text-decoration: none;

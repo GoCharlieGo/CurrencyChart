@@ -7,7 +7,7 @@
         <div class="col-lg-12">
             <div class="button-row">
                 <div class="razor-button">
-                    Razor Chart
+                    @(Html.ActionLink("Razor Chart", "Razor","Home"))
                 </div>
                 <div class="ajax-button">
                     Ajax Chart
@@ -16,7 +16,7 @@
             <div class="chart-container">
 
             </div>
-            <div class="transaction-info">
+            <div class="transaction-info hidden">
                 @(Html.Action("TransactionInfoPartial","Home"))
             </div>
         </div>

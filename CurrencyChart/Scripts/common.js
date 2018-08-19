@@ -1,17 +1,27 @@
 ﻿$(document).ready(function() {
-    $('.razor-button').on('click',
-        function() {
-            alert('Razor');
+    $('.ajax-button').on('click',
+        function () {
+            $('.transaction-info').css('visibility', 'visible');
             $.ajax({
-                url:'/home/RazorPartial',
+                url: '/home/Ajax',
                 type: 'POST',
-                success: function (data) {
-                    $('.chart-container').html(data);
+                success: function (d) {
+                    var options = {
+                        title: {
+                            text: "График"
+                        },
+                        data: [
+                            {
+                                type: "column",
+                                dataPoints: d
+                        }
+                        ]
+                    };
+                    $('.chart-container').CanvasJSChart(options).css('height','500px');
+                },
+                complete: function() {
+                    $('.transaction-info').removeClass('hidden');
                 }
             });
-        });
-    $('.ajax-button').on('click',
-        function() {
-            alert('Ajax');
         });
 });

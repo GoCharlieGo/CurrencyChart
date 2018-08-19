@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web.Mvc;
 using CurrencyChart.DAL;
 using DotNet.Highcharts;
@@ -11,7 +13,11 @@ using DotNet.Highcharts.Options;
 
 namespace CurrencyChart.Controllers
 {
-
+    public class ChartJS
+    {
+        public string label { get; set; }
+        public int y { get; set; }
+    }
     public class HomeController : Controller
     {
         private CurrencyChartContext db = new CurrencyChartContext();
@@ -21,7 +27,7 @@ namespace CurrencyChart.Controllers
             return View();
         }
 
-        public ActionResult RazorPartial()
+        public ActionResult Razor()
         {
             Highcharts columnChart = new Highcharts("columnchart");
             var transactions = db.Transactions.Include(t => t.Currency);
@@ -41,10 +47,6 @@ namespace CurrencyChart.Controllers
                 Text = "График"
             });
 
-            //columnChart.SetSubtitle(new Subtitle()
-            //{
-            //    Text = "Played 9 Years Together From 2004 To 2012"
-            //});
             var dates = transactions.ToList().OrderBy(x=>x.Date).Select(x=>x.Date.ToShortDateString()).ToArray();
             
             columnChart.SetXAxis(new XAxis()
@@ -73,7 +75,7 @@ namespace CurrencyChart.Controllers
                 BorderRadius = 6,
                 BackgroundColor = new BackColorOrGradient(ColorTranslator.FromHtml("#FFADD8E6"))
             });
-            object[] prices = transactions.ToList().OrderBy(x => x.Date).Select(x => (object)x.Price).ToArray();
+            var prices = transactions.ToList().OrderBy(x => x.Date).Select(x => (object)x.Price).ToArray();
             columnChart.SetSeries(new Series[]
             {
                 new Series{
@@ -84,12 +86,18 @@ namespace CurrencyChart.Controllers
             }
             );
 
-            return View("_Razor",columnChart);
+            return View("Razor",columnChart);
         }
 
-        public ActionResult AjaxPartial()
+        public JsonResult Ajax()
         {
-            return null;
+            var model = db.Transactions.ToList().OrderBy(x=>x.Date);
+            List<ChartJS> arr = new List<ChartJS>();
+            foreach (var m in model)
+            {
+                arr.Add(new ChartJS() {label = m.Date.ToShortDateString(), y = m.Price});
+            }
+            return Json(arr);
         }
 
         public ActionResult TransactionInfoPartial()
